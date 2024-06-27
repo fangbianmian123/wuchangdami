@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>五常大米</title>
+	</head>
+	<style>
+		body,
+		ul,
+		li,
+		ol,
+		dl,
+		dd,
+		dt,
+		p,
+		h1,
+		h2,
+		h3,
+		h4,
+		h6,
+		form,
+		img {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			list-style: none;
+		}
+
+		.box2 {
+			width: 1048px;
+			height: 400px;
+
+		}
+
+		h4 {
+			text-align: center;
+			font-size: 40px;
+			background-color: #edfffe;
+		}
+
+		h3 {
+			text-align: center;
+			font-size: 40px;
+			background-color: #f4f8ff;
+		}
+
+		body {
+			font-family: Arial, Helvetica, sans-serif, "宋体";
+			font-size: 20px;
+		}
+
+		/*未点击和点击后的样式*/
+		a:link,
+		a:visited {
+			color: #222;
+			text-decoration: none;
+		}
+
+		/*鼠标移上时的样式*/
+		a:hover {
+			color: #aaff7f;
+		}
+
+		header {
+			background-color: #fff4a0;
+		}
+
+		header .wrap {
+			height: 80px;
+			display: flex;
+		}
+
+		header .wrap>* {
+			flex: 1;
+		}
+
+		header .wrap .logo img {
+			/* margin-top: 20px; */
+			width: 200px;
+		}
+
+		header nav {
+			display: flex;
+			font-size: 15px;
+			justify-content: space-around;
+		}
+
+		header nav a {
+			color: #fff;
+			flex: 1;
+			transition: all 500ms;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		header nav a:hover {
+			color: #fff;
+			background: #fff561;
+		}
+
+		header nav a:first-child {
+			background: #fff561;
+		}
+
+		.search-container {
+			margin: 20px;
+			text-align: right;
+		}
+
+		.search-input {
+			padding: 10px;
+			width: 150px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		.search-button {
+			padding: 10px 20px;
+			background-color: #009688;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		* {
+			padding: 0%;
+			margin: 0px;
+		}
+
+		body {
+			color: #333;
+			font-size: 20px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.box {
+			display: flex;
+			background-color: #fffbea;
+			text-indent: 2em;
+		}
+
+		.main {
+			width: 100%;
+			margin-left: 0%;
+			margin-right: 0%;
+
+		}
+
+		.left,
+		.mid,
+		.right {
+			margin-top: 0;
+			/* margin-right: 50px; */
+
+			flex: 1;
+			width: 400px;
+			height: 400px;
+
+		}
+
+		.mid {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+
+		.box2 {
+			display: flex;
+			background-color: #edfff6;
+		}
+
+		.main {
+			width: 100%;
+			margin-left: 0%;
+			margin-right: 0%;
+
+		}
+
+		.left1,
+		.mid1,
+		.right1,
+		.right2 {
+			margin-top: 0;
+			/* margin-right: 50px; */
+			margin-left: 3%;
+			flex: 1;
+			width: 400px;
+			height: 400px;
+
+		}
+
+		ul,
+		li {
+			list-style: none;
+		}
+
+		.photos {
+			width: 400px;
+			height: 400px;
+
+		}
+video{
+
+	width:100%;
+	height: 400px;
+	text-align: center;
+}
+		.photos li {
+			float: left;
+			width: 300px;
+			height: 300px;
+			margin-left: 0px;
+			margin-bottom: 40px;
+		}
+
+		.photos li a {
+			display: inline-block;
+			width: 300px;
+			height: 300px;
+			color: #333;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		.photos a:after {
+			content: attr(title);
+		}
+
+		.photos li:nth-child(even) a {
+			transform: rotate(10deg);
+		}
+
+		.photos img {
+			width: 300px;
+			height: 300px;
+			transition: all 0.5s ease;
+		}
+
+		.photos li:hover .img4 {
+
+			box-shadow: 10px 10px 10px #333;
+			transform: rotate(-10deg);
+			float: left;
+		}
+
+		.photos li:hover .img6 {
+			box-shadw: 10px 10px 10px #333;
+			transform: rotate(-10deg);
+		}
+
+		.banner {
+			width: 1850;
+			height: 400px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+
+		.banner .slider img {
+			float: left;
+			width: 1200px;
+			height: 400px;
+			margin: 0px 0px;
+		}
+
+		.banner .slider {
+			position: relative;
+			width: 4800px;
+			animation: myimg 20s linear infinite alternate;
+			/* 执行myimg动画 */
+		}
+
+		@keyframes myimg {
+
+			/* 定义动画关键帧 */
+			0%,
+			25% {
+				left: 0;
+			}
+
+			25%,
+			50% {
+				left: -1200px;
+			}
+
+			50%,
+			75% {
+				left: -2400px;
+			}
+
+			75%,
+			100% {
+				left: -3000px;
+			}
+		}
+
+		.box1 {
+			position: relative;
+			/* 外层盒子相对定位 */
+			width: 171px;
+			height: 300px;
+			perspective: 230px;
+			/* 透视距离 */
+		}
+
+		.box1 img,
+		.box1 .text {
+			/* 图像层和遮罩层的样式，位置重叠 */
+			position: absolute;
+			/* 绝对定位 */
+			top: 0;
+			left: 0;
+			width: 171px;
+			height: 300px;
+		}
+
+		.box1 .text {
+			/* 遮罩层文本块的样式 */
+			background-color: rgba(0, 0, 0, 0.5);
+			/* 背景半透明 */
+			color: white;
+		}
+
+		.box1 .text h1 {
+			width: 150px;
+			margin: 20px auto;
+			font-size: 24px;
+			text-align: center;
+		}
+
+		.box1 .text p {
+			width: 140px;
+			margin: 10px auto 0;
+			font-size: 18px;
+			text-align: justify;
+		}
+
+		.zheng,
+		.fan {
+			backface-visibility: hidden;
+			/* 背面内容不可见 */
+			transition: all 0.5s ease-in 0s;
+			/* 过渡效果 */
+		}
+
+		.fan {
+			transform: rotateY(-180deg);
+			/* 文字块不可见 */
+		}
+
+		.box1:hover .zheng {
+			transform: rotateY(180deg);
+			/* 图像不可见 */
+		}
+
+		.box1:hover .fan {
+			transform: rotateY(0deg);
+			/* 文字块可见 */
+		}
+
+		.dv1 {
+			position: relative;
+			width: 500px;
+			height: 299px;
+			margin: 20px auto;
+			background: url(img/瓦罐汤.jpg) no-repeat;
+			overflow: hidden;
+		}
+
+		.dv1 h2 {
+			position: absolute;
+			left: -200px;
+			top: 0px;
+			width: 200px;
+			height: 299px;
+			line-height: 299px;
+			background: rgba(255, 255, 0, 0.5);
+			text-align: center;
+			font-size: 36px;
+			color: #008700;
+			transition: all 0.5s;
+		}
+
+		.dv1:hover h2 {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		.dv2 {
+			position: relative;
+			width: 500px;
+			height: 299px;
+			margin: 20px auto;
+			background: url() no-repeat;
+			overflow: hidden;
+		}
+
+		.dv2 h2 {
+			position: absolute;
+			left: -200px;
+			top: 0px;
+			width: 200px;
+			height: 299px;
+			line-height: 299px;
+			background: rgba(255, 255, 0, 0.5);
+			text-align: center;
+			font-size: 36px;
+			color: #008700;
+			transition: all 0.5s;
+		}
+
+		.dv2:hover h2 {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		.footer {
+			background-color: #fff4a0;
+			width: 100%;
+			margin-left: 0%;
+			margin-right: 1%;
+			height: 50px;
+			text-align: center;
+		}
+	</style>
+	<body>
+		<header>
+			<div class="wrap">
+				<div class="logo"><img src="img/logo1.png" width="200px" height="50px"/>
+				</div>
+				<nav>
+					<a href="#">首页</a>
+					<a href="./1.html">产品介绍</a>
+					<a href="./2.html">生产过程</a>
+					<a href="./3.html">营养价值</a>
+					<a href="./4.html">登录注册</a>
+				</nav>
+					<div class="search-container">
+						<input type="text" class="search-input" placeholder="输入">
+						<button class="search-button">搜索</button>
+					</div>
+				
+			</div>
+
+		</header>
+		<div class="banner">
+			<div class="slider">
+				<img src="img/6.jpg" alt="">
+				<img src="img/4.jpg" alt="">
+				<img src="img/5.jpg" alt="">
+				<img src="img/6.jpg" alt="">
+			</div>
+		</div>
+		<div>
+			<h4><strong>匠心每粒米 理想每一餐</strong></h4>
+		</div>
+		<div class="main box">
+			<div class="left">
+				<ul class="photos">
+					<li><a href="img/7.jpg" title=""><img src="img/7.jpg" alt="五常大米" class="img4"
+								style="float: left;" /></a></li>
+				</ul>
+			</div>
+			<div class="mid">
+五常大米是中国黑龙江省五常市特产，是国家地理标志保护产品。其颗粒饱满，质地坚硬，色泽清白透明，饭粒油亮，香味浓郁。五常大米煮出的米饭口感绵软略粘、微甜、略有韧性，是餐桌上备受欢迎的优质大米。五常市优质的自然资源，赋予了五常大米独特的品质。这种气候条件使当地收获的大米颗粒饱满、质地坚硬、饭粒油亮、香味浓郁，水稻中干物质积累多，营养成分高，可速溶解的双链糖含量高，所以吃起来香甜。另外由于支链淀粉含量高，米饭油性大，如果将一碗米饭倒进另一碗里，空碗内挂满油珠，连一颗饭粒都挂不上。米饭清淡略甜、绵软略黏、芳香爽口。</div>
+
+			<div class="right">
+				<ul class="photos">
+					<li><a href="img/8.jpg" title=""><img src="img/8.jpg" alt="大米" class="img6" /></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<h3><strong>五常大米 中国味道</strong></h3>
+		<div class="main box2">
+			<div class="left1">
+				<div class="box1">
+					<img src="img/米粒均匀.jpg" alt="米粒均匀" class="zheng" />
+					<div class="text fan">
+						<h1>米粒均匀</h1>
+						<p>五常大米米粒规整均匀，大小相差无几。烹饪时受热同步，熟后颗颗饱满，散发诱人香气，口感绝佳。</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="mid1">
+				<div class="box1"><img src="img/颗粒饱满.jpg" alt="颗粒饱满" class="zheng" />
+					<div class="text fan">
+						<h1>颗粒饱满</h1>
+						<p>五常大米颗粒圆润且饱满，充实有质感。蕴含丰富营养，蒸煮后膨胀饱满，软糯又不失嚼劲。</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="right1">
+				<div class="box1"><img src="img/色泽洁白.jpg" alt="色泽洁白" class="zheng" />
+					<div class="text fan">
+						<h1>色泽洁白</h1>
+						<p>五常大米色泽纯净洁白，如霜似雪。无杂色杂质，光泽自然柔和，观之赏心悦目，品质上乘。</p>
+					</div>
+				</div>
+			</div>
+			<div class="right2">
+				<div class="box1"><img src="img/2.jpg" alt="软硬适中" class="zheng" />
+					<div class="text fan">
+						<h1>软硬适中</h1>
+						<p>五常大米蒸煮后软硬程度适中，既不过软失去口感，又不会过硬难以咀嚼，入口细腻，滋味悠长。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href=" ">
+							  <video src="img/五常大米.mp4" controls>
+							  </video>
+							</a >
+		<div class="footer">
+			版权所有@杨明浩
+		</div>
+	</body>
+</html>
